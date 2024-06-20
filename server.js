@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const userRoutes = require('./routes/user');
 const quizRoutes = require('./routes/quiz');
+const surveyRoutes = require('./routes/surveys'); // Importa surveyRouter
 
 const app = express();
 
@@ -18,7 +19,7 @@ app.use(express.json());
 // Rutas
 app.use('/api/user', userRoutes);
 app.use('/api/quiz', quizRoutes);
-app.use('/api/surveys', surveyRouter);
+app.use('/api/surveys', surveyRoutes); // Define surveyRouter
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
@@ -32,4 +33,3 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
-

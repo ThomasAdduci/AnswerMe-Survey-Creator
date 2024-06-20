@@ -1,19 +1,18 @@
 // middleware/auth.js
-const jwt = require('jsonwebtoken');
-const User = require('../models/user');
 
-module.exports = async (req, res, next) => {
-    const token = req.header('Authorization').replace('Bearer ', '');
+const jwt = require('jsonwebtoken');
+
+function authenticateToken(req, res, next) {
+    const token = req.header('Authorization');
+    if (!token) return res.status(401).json({ error: 'Acceso denegado' });
+
     try {
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        const user = await User.findOne({ _id: decoded._id, 'tokens.token': token });
-        if (!user) {
-            throw new Error();
-        }
-        req.token = token;
-        req.user = user;
+        const verified = jwt.verify(token, process.env.TOKEN_SECRET);
+        req.user = verified;
         next();
     } catch (error) {
-        res.status(401).json({ message: 'Autenticación fallida' });
+        res.status(400).json({ error: 'Token no es válido' });
     }
-};
+}
+
+module.exports = { authenticateToken };

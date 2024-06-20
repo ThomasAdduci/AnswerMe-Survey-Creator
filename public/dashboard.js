@@ -1,3 +1,5 @@
+/* public/dashboard.js */
+
 document.addEventListener('DOMContentLoaded', function() {
   const tabLinks = document.querySelectorAll('.tab-link');
   const tabContents = document.querySelectorAll('.tab-content');

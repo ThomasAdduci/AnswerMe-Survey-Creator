@@ -1,3 +1,5 @@
+// models/quiz.js
+
 const mongoose = require('mongoose');
 
 const QuestionSchema = new mongoose.Schema({

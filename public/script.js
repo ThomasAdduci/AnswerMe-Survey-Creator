@@ -1,3 +1,5 @@
+/* public/script.js */
+
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('register-btn').addEventListener('click', register);
     document.getElementById('login-btn').addEventListener('click', login);
