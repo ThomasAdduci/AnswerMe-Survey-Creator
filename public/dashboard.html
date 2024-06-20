@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#" class="tab-link" data-tab="mis-encuestas">Mis Encuestas</a>
+        <a href="#" class="tab-link" data-tab="nueva-encuesta">Nueva Encuesta</a>
+        <a href="#" class="tab-link" data-tab="mi-perfil">Mi Perfil</a>
+        <a href="#" id="logout-btn">Cerrar Sesión</a>
+    </div>
+
+    <div class="content">
+        <div id="mis-encuestas" class="tab-content">
+            <h2>Mis Encuestas</h2>
+            <ul id="survey-list"></ul>
+        </div>
+        <div id="nueva-encuesta" class="tab-content" style="display: none;">
+            <h2>Nueva Encuesta</h2>
+            <!-- Formulario para crear una nueva encuesta -->
+        </div>
+        <div id="mi-perfil" class="tab-content" style="display: none;">
+            <h2>Mi Perfil</h2>
+            <!-- Información del perfil del usuario -->
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

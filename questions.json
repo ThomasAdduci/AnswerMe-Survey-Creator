@@ -1,0 +1,22 @@
+[
+  {
+      "question": "¿Cuál es la capital de Francia?",
+      "choices": ["Madrid", "París", "Roma", "Lisboa"],
+      "answer": "París"
+  },
+  {
+      "question": "¿Cuál es el planeta más grande del sistema solar?",
+      "choices": ["Tierra", "Marte", "Júpiter", "Saturno"],
+      "answer": "Júpiter"
+  },
+  {
+      "question": "¿Qué elemento químico tiene el símbolo 'O'?",
+      "choices": ["Oro", "Oxígeno", "Plata", "Hierro"],
+      "answer": "Oxígeno"
+  },
+  {
+      "question": "¿Quién fue el rival de la selección Argentina de fútbol en el mundial de Qatar 2022?",
+      "choices": ["Francia", "Holanda", "Brasil", "Croacia"],
+      "answer": "Francia"
+  }
+]
